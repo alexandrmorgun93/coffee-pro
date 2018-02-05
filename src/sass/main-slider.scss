@@ -1,0 +1,98 @@
+.main_slider {
+  width: 100%;
+  position: relative;
+  padding: 0 rem(80px) rem(160px);
+  .main_slide-wrap {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+.left_slide-elem {
+  position: relative;
+  max-width: 50%;
+  width: 50%;
+  max-height: rem(1200px);
+  height: rem(1200px);
+  margin-right: rem(20px);
+}
+
+.right_slide_elem {
+  max-width: 50%;
+  width: 50%;
+  position: relative;
+  margin-top: rem(-65px);
+  .slide_img {
+    position: relative;
+    width: 100%;
+    max-height: rem(526px);
+    height: rem(526px);
+    margin-bottom: rem(25px);
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.img {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  //visibility: hidden;
+  //opacity: 0;
+  //transform: scale(0.1);
+  //transition: .3s;
+  //&.active {
+  //  visibility: visible;
+  //  opacity: 1;
+  //  transform: scale(1);
+  //}
+}
+
+.slide_control {
+  position: relative;
+  margin: rem(30px) 0 0 0;
+  max-width: rem(457px);
+  width: 100%;
+  height: rem(200px);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background: url_css("img/main-slide/slide-control.jpg") no-repeat;
+  background-size: cover;
+  &::before {
+    @include before_fig(100%, 100%, transparente);
+    background-color: rgba(24, 24, 24, 0.71);
+    z-index: 1;
+  }
+  .prev_slide, .next_slide, .decoration {
+    position: relative;
+    z-index: 1;
+    max-width: rem(78px);
+    width: 100%;
+    height: rem(78px);
+    border-radius: 50%;
+    border: rem(1px) solid $main-color;
+    background-color: transparent;
+    margin: 0 rem(20px);
+    color: $main-color;
+    -webkit-transition: .4s;
+    transition: .4s;
+    &:hover {
+      background-color: $main-color;
+      color: #ffffff;
+    }
+    i {
+      font-size: rem(20px);
+    }
+  }
+}

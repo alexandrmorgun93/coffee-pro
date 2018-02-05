@@ -1,0 +1,177 @@
+body {
+  font: 400 rem(22px)/1.5 $Futura_Light_C;
+  letter-spacing: rem(0.66px);
+}
+
+.container {
+  max-width: rem(1340px);
+  width: 100%;
+  position: relative;
+  margin: auto;
+}
+
+.slide_text {
+  text-align: center;
+  color: #ffffff;
+  letter-spacing: rem(00.75px);
+  margin-bottom: rem(30px);
+}
+
+.btn {
+  max-width: rem(190px);
+  background-color: transparent;
+  width: 100%;
+  height: rem(50px);
+  border-radius: rem(25px);
+  border: rem(1px) solid $main-color;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: $main-color;
+  font-family: $Futura_PT;
+  transition: .3s;
+  font: 700 rem(20px)/1 $Futura_PT;
+  letter-spacing: rem(1px);
+  cursor: pointer;
+  &:hover {
+    background-color: $main-color;
+    color: #ffffff;
+  }
+}
+
+.slick-prev {
+  left: rem(-90px);
+  &::before {
+    content: '\e806';
+    font-family: 'fontello';
+    position: relative;
+    left: rem(-2px);
+  }
+}
+
+.slick-next {
+  right: rem(-90px);
+  &::before {
+    content: '\e804';
+    font-family: 'fontello';
+    position: relative;
+    left: rem(3px);
+  }
+}
+
+.slick-prev, .slick-next {
+  z-index: 10;
+  max-width: rem(78px);
+  width: 100%;
+  height: rem(78px);
+  border: rem(1px) solid $main-color;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  background-color: transparent;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: rem(30px);
+  color: $main-color;
+  transition: .3s;
+  &:hover {
+    background-color: $main-color;
+  }
+  &:hover::before {
+    color: #ffffff;
+  }
+}
+
+.icon_circle {
+  color: #231f20;
+  font: 400 rem(26px)/1 $Futura_Light_C;
+  transition: .3s;
+  &:hover {
+    color: $main-color;
+    i {
+      color: #ffffff;
+      background-color: $main-color;
+    }
+  }
+  i {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: rem(45px);
+    height: rem(45px);
+    font-size: rem(23px);
+    border-radius: 50%;
+    background-color: transparent;
+    color: $main-color;
+    margin-right: rem(30px);
+    transition: .3s;
+  }
+}
+
+.facebook, .instagram, .tripadvisor, .mail, .icon-play {
+  position: relative;
+  width: rem(45px);
+  height: rem(45px);
+  border-radius: 50%;
+  border: rem(1px) solid $main-color;
+  font-size: rem(18px);
+  color: $main-color;
+  transition: .3s;
+  display: inline-flex;
+  &::before {
+    position: absolute;
+    font-family: "fontello";
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  &:hover {
+    background-color: $main-color;
+    color: #ffffff;
+  }
+}
+
+.facebook {
+  &::before {
+    content: '\f09a';
+  }
+}
+
+.instagram {
+  &::before {
+    content: '\f32d';
+  }
+}
+
+.tripadvisor {
+  &::before {
+    content: '\f262';
+  }
+}
+
+.mail {
+  &::before {
+    content: '\e800';
+  }
+}
+
+.icon-play {
+  width: rem(78px);
+  height: rem(78px);
+  cursor: pointer;
+  position: absolute;
+  z-index: 3;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  &.active {
+    visibility: hidden;
+    opacity: 0;
+  }
+  &::before {
+    content: '\e816';
+  }
+}

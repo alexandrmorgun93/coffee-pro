@@ -1,0 +1,64 @@
+.main_head {
+  width: 100%;
+  position: absolute;
+  z-index: 100;
+  left: 0;
+  top: rem(95px);
+  height: rem(60px);
+  .container {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 rem(15px);
+    .head_language {
+      position: relative;
+    }
+  }
+}
+
+.head_elem {
+  display: flex;
+  li {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    margin-right: rem(20px);
+    background-color: transparent;
+    transition: .3s;
+    position: relative;
+    cursor: pointer;
+    &::before {
+      @include before_fig(0, 0, transparent);
+      border: rem(1px) solid $main-color;
+      border-radius: 50%;
+      top: 0;
+      left: 0;
+      transition: .4s;
+      opacity: 0;
+    }
+    &:hover::before {
+      width: rem(50px);
+      height: rem(50px);
+      opacity: 1;
+      left: rem(-10px);
+      top: rem(-10px);
+    }
+    &:last-child {
+      margin-right: 0;
+    }
+    a {
+      font: 700 rem(18px)/1 $main-color;
+      color: $main-color;
+      text-transform: uppercase;
+      letter-spacing: rem(1.5px);
+    }
+  }
+}
+
+.right_head {
+  .social {
+    a {
+      margin-right: rem(15px);
+    }
+  }
+}

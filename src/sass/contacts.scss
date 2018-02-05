@@ -1,0 +1,61 @@
+.contacts {
+  position: relative;
+  width: 100%;
+  height: rem(780px);
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  #map {
+    height: 100%;
+    position: relative;
+    width: 50%;
+  }
+  .contacts_wrap {
+    width: 50%;
+    position: relative;
+    background: url_css('img/contacts-bg.png') no-repeat;
+    background-size: cover;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    .contacts_content {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      h3 {
+        margin-left: rem(65px);
+        letter-spacing: rem(1.2px);
+        font: 700 rem(40px)/1 $Futura_PT;
+        margin-bottom: rem(50px);
+      }
+      a {
+        margin-bottom: rem(50px);
+        &:last-child {
+          margin-bottom: 0;
+        }
+        &:hover {
+          i {
+            background-color: $main-color;
+          }
+        }
+        i {
+          background-color: #000000;
+        }
+      }
+    }
+  }
+}

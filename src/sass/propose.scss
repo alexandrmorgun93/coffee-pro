@@ -1,0 +1,108 @@
+.propose {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  margin-bottom: rem(100px);
+  &::before {
+    @include before_fig(100%, 100%, transparante);
+    background-color: rgba(24, 24, 24, 0.71);
+    z-index: 1;
+  }
+  .parallax {
+    position: absolute;
+  }
+  .wrap_propose {
+    width: 100%;
+    position: relative;
+    padding: rem(190px) 0 rem(250px);
+    .container {
+      z-index: 3;
+      h2 {
+        text-align: center;
+        color: #ffffff;
+        font: 700 rem(40px)/1 $Futura_PT;
+        letter-spacing: rem(2px);
+        margin-bottom: rem(85px);
+      }
+    }
+  }
+}
+
+.slide_cocoa, .slide_dessert, .slide_tea {
+  position: relative;
+  width: 100%;
+  margin-bottom: rem(80px);
+  .cocoa_wrap, .deserts_wrap, .tea_wrap {
+    width: 100%;
+    display: -webkit-box !important;
+    display: -ms-flexbox !important;
+    display: flex !important;
+    -webkit-box-pack: center !important;
+        -ms-flex-pack: center !important;
+            justify-content: center !important;
+    .cocoa_elem {
+      position: relative;
+      max-width: rem(425px);
+      width: 100%;
+      height: rem(335px);
+      margin: 0 rem(15px);
+      &:hover {
+        .cocoa_text {
+          opacity: 1;
+          visibility: visible;
+          -webkit-transform: scale(1);
+                  transform: scale(1);
+        }
+      }
+      img {
+        width: 100%;
+        height: 100%;
+        position: relative;
+        -o-object-fit: cover;
+           object-fit: cover;
+      }
+      .cocoa_text {
+        max-width: rem(425px);
+        width: 100%;
+        height: rem(335px);
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: #fff;
+        text-align: center;
+        padding: 0 rem(25px);
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+        -webkit-transition: .3s;
+        transition: .3s;
+        opacity: 0;
+        visibility: hidden;
+        -webkit-transform: scale(0.1);
+                transform: scale(0.1);
+        .popup_title {
+          font: 700 rem(25px)/1 $Futura_PT;
+          color: #000000;
+          margin-bottom: rem(50px);
+        }
+        .popup_text {
+          p {
+            color: #515151;
+            margin-bottom: rem(25px);
+          }
+        }
+        .btn {
+          -ms-flex-item-align: center;
+              align-self: center;
+        }
+      }
+    }
+  }
+}
